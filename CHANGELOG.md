@@ -332,7 +332,7 @@ npm start
 **Start Admin:**
 ```bash
 cd admin
-npm run dev
+run dev
 ```
 
 **Test Features:**
