@@ -1,0 +1,63 @@
+/* ===============================
+   Amazon-Style Popular Section
+================================*/
+.amazon-popular-section {
+  width: 100%;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.amazon-popular-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+}
+
+.amazon-popular-divider {
+  width: 120px;
+  height: 3px;
+  background: #ffa41c;
+  border: none;
+  margin: 10px auto 30px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   Product Grid
+================================*/
+.amazon-popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* ===============================
+   Loading Text
+================================*/
+.amazon-loading {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ===============================
+   Responsive
+================================*/
+@media (max-width: 768px) {
+  .amazon-popular-title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .amazon-popular-section {
+    padding: 30px 10px;
+  }
+  .amazon-popular-grid {
+    gap: 15px;
+  }
+}

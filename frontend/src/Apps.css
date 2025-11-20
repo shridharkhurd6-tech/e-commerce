@@ -1,0 +1,62 @@
+/* Global container for the entire app */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Ensure Navbar and Footer stay visually distinct */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content area (Shop, Product, etc.) */
+main {
+  flex: 1;
+  padding: 20px 5vw;
+}
+
+/* Footer spacing */
+.footer {
+  margin-top: auto;
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .app {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 15px 3vw;
+  }
+}
+
+/* Smooth transitions for theme elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hide scrollbar (for cleaner look) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

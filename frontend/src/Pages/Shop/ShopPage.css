@@ -1,0 +1,52 @@
+/* AMAZON STYLE HOMEPAGE */
+
+.amazon-home {
+  width: 100%;
+  background: #e3e6e6;
+}
+
+.amazon-section {
+  width: 95%;
+  max-width: 1500px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.amazon-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffa41c;
+  padding-left: 10px;
+}
+
+/* Amazon Grid (Category section) */
+.amazon-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Amazon-style product tiles */
+.amazon-tile {
+  background: white;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.amazon-tile:hover {
+  transform: scale(1.02);
+}
+
+/* Amazon Carousel */
+.amazon-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}

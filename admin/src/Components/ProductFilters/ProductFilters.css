@@ -1,0 +1,11 @@
+.product-filters {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:18px;
+}
+.pf-search { flex:1; padding:8px 10px; border-radius:8px; border:1px solid #ddd; }
+.pf-select { padding:8px 10px; border-radius:8px; border:1px solid #ddd; }
+.pf-price { display:flex; gap:6px; align-items:center; }
+.pf-price input { width:80px; padding:8px; border-radius:8px; border:1px solid #ddd; }

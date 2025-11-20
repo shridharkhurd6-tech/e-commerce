@@ -1,0 +1,182 @@
+/* 🌐 Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔹 Root Variables (Easy Theming) */
+:root {
+  --primary-color: #ff4b2b;        /* Brand accent */
+  --primary-hover: #ff6347;        /* Hover accent */
+  --background-light: #fafafa;     /* Page background */
+  --background-white: #ffffff;
+  --text-dark: #222;
+  --text-medium: #555;
+  --text-light: #888;
+  --border-color: #e0e0e0;
+  --font-main: 'Poppins', 'Roboto', sans-serif;
+  --max-width: 1200px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
+
+/* 🔹 Global Typography */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🔹 Global Container */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* 🔹 Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--text-medium);
+  font-size: 1rem;
+}
+
+/* 🔹 Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-medium);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* 🔹 Buttons */
+button {
+  font-family: var(--font-main);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color var(--transition-medium),
+              transform var(--transition-fast);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* 🔹 Inputs */
+input, select, textarea {
+  font-family: var(--font-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  outline: none;
+  font-size: 1rem;
+  transition: border var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(255, 75, 43, 0.3);
+}
+
+/* 🔹 Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* 🔹 Scrollbar (Webkit Browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 95%;
+  }
+}

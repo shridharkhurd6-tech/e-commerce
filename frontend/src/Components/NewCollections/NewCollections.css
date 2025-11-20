@@ -1,0 +1,100 @@
+.new-collections {
+  width: 100%;
+  padding: 20px 12px;
+  background: #f7f7f7;
+  position: relative;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #131921;
+}
+
+.view-all-btn {
+  background: #febd69;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.view-all-btn:hover {
+  background: #ffa733;
+  transform: scale(1.05);
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Loading text */
+.loading-text {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Floating View All button */
+.view-all-btn-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #febd69;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, opacity 0.3s ease, background 0.2s ease;
+  z-index: 1000;
+}
+
+.view-all-btn-floating:hover {
+  background: #ffa733;
+  transform: scale(1.05);
+}
+
+.view-all-btn-floating.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+}
+
+.view-all-btn-floating.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .collections-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .collections-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

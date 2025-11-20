@@ -1,0 +1,265 @@
+/* ==========================================================================
+   AMAZON PRODUCT PAGE — LAYOUT GRID
+   ========================================================================== */
+
+.amazon-product-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.amazon-3col-grid {
+  display: grid;
+  grid-template-columns: 25% 45% 25%;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   LEFT: IMAGE GALLERY (Thumbnails + Main Image)
+   ========================================================================== */
+
+.amazon-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.amazon-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amazon-thumbnails .thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.amazon-thumbnails .thumb:hover {
+  border-color: #ffa41c;
+}
+
+.amazon-thumbnails .thumb.active {
+  border-color: #ffa41c;
+  box-shadow: 0px 0px 4px rgba(255, 164, 28, 0.7);
+}
+
+.amazon-main-img img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+/* ==========================================================================
+   CENTER: PRODUCT DETAILS (Title + Price + Highlights)
+   ========================================================================== */
+
+.amazon-product-info {
+  padding: 10px;
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+}
+
+.rating {
+  margin: 8px 0;
+  color: #ffa41c;
+  font-size: 18px;
+}
+
+.rating span {
+  color: #007185;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Price Block */
+.price-block {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-block .new {
+  font-size: 28px;
+  color: #b12704;
+  font-weight: bold;
+}
+
+.price-block .old {
+  text-decoration: line-through;
+  color: #555;
+  font-size: 18px;
+}
+
+.price-block .save {
+  color: #007600;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Highlights */
+.highlights h3,
+.description h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.highlights ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.highlights li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Description */
+.description p {
+  margin-top: 10px;
+  line-height: 1.5rem;
+  font-size: 15px;
+  color: #333;
+}
+
+
+/* ==========================================================================
+   RIGHT COLUMN — BUY BOX (Amazon offers box)
+   ========================================================================== */
+
+.amazon-buy-box {
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f7fafa;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.buy-price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b12704;
+  margin-bottom: 10px;
+}
+
+.delivery-text {
+  color: #007600;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.in-stock {
+  color: #007600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.add-to-cart-btn {
+  background: #ffd814;
+}
+
+.add-to-cart-btn:hover {
+  background: #f7ca00;
+}
+
+.buy-now-btn {
+  background: #ffa41c;
+}
+
+.buy-now-btn:hover {
+  background: #f08804;
+}
+
+.gift-check {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.gift-check input {
+  margin-right: 6px;
+}
+
+
+/* ==========================================================================
+   LOADING STATE
+   ========================================================================== */
+
+.loading {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 22px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .amazon-3col-grid {
+    grid-template-columns: 35% 65%;
+  }
+
+  .amazon-buy-box {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .amazon-3col-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amazon-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .amazon-thumbnails {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .amazon-main-img img {
+    max-height: 350px;
+  }
+
+  .amazon-buy-box {
+    width: 100%;
+  }
+}

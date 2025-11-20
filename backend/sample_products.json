@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Stylish Women's T-Shirt",
+    "image": "http://localhost:4000/images/product_1.jpg",
+    "category": "women",
+    "new_price": 45.99,
+    "old_price": 59.99,
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Classic Men's Polo Shirt",
+    "image": "http://localhost:4000/images/product_2.jpg",
+    "category": "men",
+    "new_price": 52.99,
+    "old_price": 69.99,
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Casual Women's Jeans",
+    "image": "http://localhost:4000/images/product_3.jpg",
+    "category": "women",
+    "new_price": 65.99,
+    "old_price": 85.99,
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Premium Men's Jacket",
+    "image": "http://localhost:4000/images/product_4.jpg",
+    "category": "men",
+    "new_price": 125.99,
+    "old_price": 165.99,
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Kids Colorful T-Shirt",
+    "image": "http://localhost:4000/images/product_5.jpg",
+    "category": "kid",
+    "new_price": 28.99,
+    "old_price": 39.99,
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Elegant Women's Dress",
+    "image": "http://localhost:4000/images/product_6.jpg",
+    "category": "women",
+    "new_price": 89.99,
+    "old_price": 119.99,
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Comfortable Men's Shorts",
+    "image": "http://localhost:4000/images/product_7.jpg",
+    "category": "men",
+    "new_price": 38.99,
+    "old_price": 49.99,
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Girl's Party Dress",
+    "image": "http://localhost:4000/images/product_8.jpg",
+    "category": "kid",
+    "new_price": 42.99,
+    "old_price": 59.99,
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Women's Winter Coat",
+    "image": "http://localhost:4000/images/product_9.jpg",
+    "category": "women",
+    "new_price": 145.99,
+    "old_price": 189.99,
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Men's Casual Shirt",
+    "image": "http://localhost:4000/images/product_10.jpg",
+    "category": "men",
+    "new_price": 48.99,
+    "old_price": 64.99,
+    "available": true
+  }
+]

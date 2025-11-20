@@ -1,0 +1,317 @@
+.orders-container {
+  padding: 30px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+  color: #131921;
+  font-size: 28px;
+  font-weight: 700;
+  border-bottom: 2px solid #FF9900;
+  padding-bottom: 15px;
+}
+
+/* Stats Dashboard */
+.stats-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card-small {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 4px solid #FF9900;
+  transition: transform 0.3s;
+}
+
+.stat-card-small:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card-small.pending {
+  border-left-color: #ffc107;
+}
+
+.stat-card-small.shipped {
+  border-left-color: #17a2b8;
+}
+
+.stat-card-small.delivered {
+  border-left-color: #28a745;
+}
+
+.stat-card-small.cancelled {
+  border-left-color: #dc3545;
+}
+
+.stat-card-small.revenue {
+  border-left-color: #FF9900;
+}
+
+.stat-icon-small {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.stat-card-small h3 {
+  color: #666;
+  font-size: 12px;
+  margin: 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Filters */
+.orders-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.status-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+  border-color: #FF9900;
+}
+
+.filter-btn.active {
+  background: #FF9900;
+  color: white;
+  border-color: #FF9900;
+}
+
+/* Orders Table */
+.orders-table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.loading,
+.no-orders {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 16px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table thead {
+  background: #f9f9f9;
+  border-bottom: 2px solid #ddd;
+}
+
+.orders-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.orders-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.orders-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.orders-table td {
+  padding: 15px;
+  color: #333;
+  font-size: 14px;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.total {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.status-delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-shipped {
+  background: #cfe2ff;
+  color: #084298;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Action Button */
+.btn-view {
+  padding: 6px 12px;
+  background: #FF9900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btn-view:hover {
+  background: #FF7D00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 153, 0, 0.3);
+}
+
+.action-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.action-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 150px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.action-dropdown-wrapper:hover .action-dropdown {
+  display: block;
+}
+
+.action-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.action-dropdown button:hover {
+  background: #f0f0f0;
+  padding-left: 18px;
+  color: #FF9900;
+}
+
+.action-dropdown button:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.action-dropdown button:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 15px;
+  }
+
+  .stats-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .status-filters {
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .orders-table {
+    font-size: 12px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 10px 8px;
+  }
+}

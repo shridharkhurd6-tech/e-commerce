@@ -1,0 +1,260 @@
+:root {
+  --brand: #ff9900;           /* Amazon orange */
+  --brand-dark: #ff7a00;
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --text: #111827;
+  --shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --card-radius: 12px;
+  --gap: 18px;
+  --max-width: 1250px;
+  --accent: #0f1724;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout container */
+.app-container {
+  max-width: var(--max-width);
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+/* -------------------------------------
+   🔶 NAVIGATION (Amazon-Style)
+-------------------------------------- */
+.site-header {
+  background: #131921;
+  color: #fff;
+  padding: 12px 20px;
+  border-bottom: 3px solid rgba(255, 153, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Logo / Brand */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.header-brand .logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--brand);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.12);
+}
+
+.header-brand .title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Search */
+.header-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-search input[type="search"] {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.header-search .search-btn {
+  background: var(--brand);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.action-btn .count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 7px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* -------------------------------------
+   🛍 PRODUCT GRID
+-------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--gap);
+  margin-top: 20px;
+}
+
+/* -------------------------------------
+   📦 PRODUCT CARD (Amazon)
+-------------------------------------- */
+.product-card {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+.product-media {
+  height: 220px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.03), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-media img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.product-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 40px;
+  line-height: 1.3;
+  color: var(--accent);
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-new {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.price-old {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.15);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: var(--accent);
+}
+
+/* -------------------------------------
+   📱 RESPONSIVE TWEAKS
+-------------------------------------- */
+@media (max-width: 768px) {
+  .header-brand .title {
+    display: none;
+  }
+
+  .header-search {
+    max-width: 100%;
+  }
+
+  .product-media {
+    height: 180px;
+  }
+}

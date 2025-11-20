@@ -1,0 +1,66 @@
+/* ============================
+   AMAZON BREADCRUMB STYLE
+   ============================ */
+
+.breadcrumb {
+  font-size: 14px;
+  color: #565959;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-home {
+  color: #007185; /* Amazon teal link */
+  text-decoration: none;
+}
+
+.breadcrumb-home:hover {
+  text-decoration: underline;
+}
+
+/* The › arrow separator */
+.breadcrumb-sep {
+  color: #565959;
+  margin: 0 4px;
+  font-size: 14px;
+}
+
+/* Links inside breadcrumbs */
+.breadcrumb-link {
+  color: #007185;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  color: #c7511f; /* Amazon orange */
+  text-decoration: underline;
+}
+
+/* Active page (last item) */
+.breadcrumb-current {
+  font-weight: 500;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 13px;
+    padding: 10px 12px;
+    overflow-x: auto;
+  }
+}

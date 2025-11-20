@@ -1,0 +1,110 @@
+/* AMAZON CART MAIN PAGE */
+
+body {
+  background: #eaeded;
+  font-family: Arial, sans-serif;
+}
+
+.cart-page-container {
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+.cart-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* Layout */
+.cart-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left side */
+.cart-left {
+  flex: 1;
+}
+
+/* Empty cart */
+.empty-cart {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+}
+
+/* Order Summary (right) */
+.order-summary {
+  width: 320px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.summary-subtotal {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.price-bold {
+  font-weight: 700;
+  color: #111;
+}
+
+/* Gift option */
+.gift-option {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.checkout-btn:hover {
+  background: #e6b440;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffa41c;
+  border: 1px solid #ca7c0a;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buy-now-btn:hover {
+  background: #f3930c;
+}
+
+/* MOBILE Responsive */
+@media (max-width: 768px) {
+  .cart-layout {
+    flex-direction: column;
+  }
+
+  .order-summary {
+    position: static;
+    width: 100%;
+  }
+}

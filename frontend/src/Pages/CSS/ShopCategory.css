@@ -1,0 +1,156 @@
+/* ----------------------------------------- */
+/* AMAZON CATEGORY PAGE - FULL LAYOUT STYLE  */
+/* ----------------------------------------- */
+
+.amazon-category-page {
+  width: 100%;
+  padding: 20px 0;
+  background: #f1f3f6;
+  font-family: Arial, sans-serif;
+}
+
+/* ----------------------------------------- */
+/* CATEGORY BANNER */
+/* ----------------------------------------- */
+
+.amazon-category-banner {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------------------- */
+/* MAIN CONTENT LAYOUT */
+/* ----------------------------------------- */
+
+.amazon-category-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ----------------------------------------- */
+/* LEFT SIDE FILTER BAR */
+/* ----------------------------------------- */
+
+.amazon-filter-sidebar {
+  width: 230px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ----------------------------------------- */
+/* SORT BAR */
+/* ----------------------------------------- */
+
+.amazon-sort-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.results-count {
+  font-size: 16px;
+}
+
+.results-count span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.sort-select {
+  padding: 6px 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ----------------------------------------- */
+/* PRODUCTS GRID */
+/* ----------------------------------------- */
+
+.amazon-category-right {
+  flex: 1;
+}
+
+.amazon-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+
+/* Empty state */
+.no-products {
+  font-size: 18px;
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+  color: #444;
+}
+
+/* ----------------------------------------- */
+/* PRODUCT CARD (Wrapper for Item component) */
+/* ----------------------------------------- */
+
+.amazon-product-grid .item {
+  padding: 12px;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.amazon-product-grid .item:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  border-color: #c4c4c4;
+}
+
+/* ----------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* ----------------------------------------- */
+
+@media (max-width: 1024px) {
+  .amazon-category-content {
+    flex-direction: column;
+  }
+
+  .amazon-filter-sidebar {
+    width: 100%;
+    order: 1;
+  }
+
+  .amazon-category-right {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .amazon-category-banner {
+    height: 160px;
+  }
+
+  .amazon-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}

@@ -1,0 +1,33 @@
+.saved-items-container {
+  margin-top: 40px;
+}
+
+.saved-items-container h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.saved-item-row {
+  display: flex;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.saved-item-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.move-to-cart-btn {
+  padding: 8px 14px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.move-to-cart-btn:hover {
+  background: #f7ca00;
+}

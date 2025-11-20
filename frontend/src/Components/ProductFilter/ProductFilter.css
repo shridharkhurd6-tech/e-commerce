@@ -1,0 +1,58 @@
+.amazon-advanced-filters {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+  border-left: 4px solid #ffa41c;
+  padding-left: 8px;
+}
+
+.filter-checkbox {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.filter-checkbox input {
+  margin-right: 8px;
+}
+
+.prime-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f3f3f3;
+  border-radius: 6px;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffa41c;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background: #f08804;
+}
+.reset-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
