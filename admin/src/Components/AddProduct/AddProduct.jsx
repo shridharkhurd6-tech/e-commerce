@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./AddProduct.css";
 //import Login from "../../Pages/Login/Login";
 //import EditProductmodal from "../EditProductModal";
